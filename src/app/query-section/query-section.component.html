@@ -1,0 +1,28 @@
+<section class="query-section">
+  <!-- Title for destination query -->
+  <h2 class="query-text">Where are you travelling?</h2>
+
+  <!-- Destination search input -->
+  <div class="destination-search">
+    <div class="destination-selection">
+      <input type="text" class="destination-input" placeholder="Search destination..." [(ngModel)]="destinationQuery"
+        (input)="showSuggestions()">
+    </div>
+
+    <!-- Display suggested destinations -->
+    <div *ngFor="let destination of suggestedDestinations" class="destination-option"
+      (click)="selectDestination(destination)">
+      {{ destination }}
+    </div>
+  </div>
+
+  <!-- Title for duration query -->
+  <h3 class="duration-query">How long are you travelling for?</h3>
+
+  <!-- Duration options buttons -->
+  <button *ngFor="let durationOption of durationOptions" class="duration-option"
+    [class.selected]="selectedDuration === durationOption" (click)="selectDuration(durationOption)"
+    [disabled]="isDisable">
+    {{ durationOption }}
+  </button>
+</section>

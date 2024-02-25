@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+	font-size: 62.5%;
+  }
+  
+  * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /* Adding box-sizing for better layout control */
+  }
+  
+  body {
+	width: 100%; /* Adjusting body width to fit the screen */
+	margin: 0; /* Remove default body margin */
+  }
+  

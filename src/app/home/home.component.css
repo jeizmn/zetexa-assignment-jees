@@ -1,0 +1,192 @@
+/* General styles */
+
+.home-container {
+  width: 100%;
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.home-inner-container {
+  display: flex;
+  width: 100%;
+  padding-left: 24px;
+  flex-direction: column;
+  font-size: 16px;
+  line-height: 150%;
+  height: 108rem;
+}
+
+.home-inner-container.full-height {
+  display: flex;
+  width: 100%;
+  padding-left: 24px;
+  flex-direction: column;
+  font-size: 16px;
+  line-height: 150%;
+  height: 110rem !important;
+}
+
+/* Header styles */
+
+.home-header {
+  backdrop-filter: blur(12px);
+  background-color: rgba(18, 18, 18, 0.5);
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  padding: 25px 60px;
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  .home-header {
+    max-width: 100%;
+    white-space: initial;
+    padding: 0 20px;
+  }
+}
+
+/* Country selection styles */
+
+.selection-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.country-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 51px;
+  border: 1px solid #e9e0fd;
+}
+
+.country-option {
+  background-color: #000;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 51px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.country-option.selected {
+  background-color: #bfa2fa;
+  color: #121212;
+}
+
+/* Content wrapper styles */
+
+.content-wrapper {
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 500;
+  position: absolute;
+  margin-top: 11rem;
+  height: 60rem;
+  transition: height 0.3s ease;
+}
+
+.content-wrapper {
+  height: 0;
+  overflow: hidden;
+}
+
+.header h1 {
+  color: #fff;
+  text-align: center;
+  font: 500 80px/115px Poppins, sans-serif;
+}
+
+.header p {
+  color: #bfa2fa;
+  text-align: center;
+  margin-top: 34px;
+  font-size: 32px;
+}
+
+/* Travel plan container styles */
+
+.travel-plan-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  width: 433px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 48px 46px;
+  transition: margin 0.3s ease;
+}
+
+.travel-plan-container.move-top {
+  margin: -37rem auto;
+}
+
+.background-image {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-position: center;
+  margin-top: 44rem;
+  max-height: 76rem;
+}
+
+/* Plan action button styles */
+
+.plan-action-button {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 13rem;
+  padding: 18px 80px;
+  border-radius: 8px;
+  background-color: #177667;
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3 ease;
+}
+
+.plan-action-button:hover {
+  background-color: #438278;
+}
+
+/* Other styles */
+
+.image-showcase {
+  margin-top: 19px;
+  display: flex;
+  justify-content: center;
+}
+
+.image-showcase__image {
+  aspect-ratio: 1.79;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  border-top: 2px solid #1f9e8a;
+  border-left: 2px solid #1f9e8a;
+  box-shadow: 0 4px 8px rgba(76, 73, 72, 0.25);
+}
+
+.arrow-icon {
+  width: 24px;
+}
+
+app-query-section[hidden] {
+  display: none;
+}

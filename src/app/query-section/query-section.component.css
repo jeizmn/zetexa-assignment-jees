@@ -1,0 +1,68 @@
+/* Styling for the query section */
+.query-section {
+  position: relative;
+  margin-top: 45rem;
+}
+
+/* Styling for query texts */
+.query-text,
+.duration-query {
+  font: 20px/150% Poppins, sans-serif;
+  margin-top: 40px;
+  white-space: nowrap;
+  color: #fff;
+}
+
+/* Styling for the destination search */
+.destination-search {
+  position: relative;
+  margin-top: 19px;
+}
+
+/* Styling for the destination input */
+.destination-input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-color: #4c4c4e;
+  color: #fff;
+  font-family: Poppins, sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  transition: border-color 0.3s ease;
+}
+
+/* Focus styling for the destination input */
+.destination-input:focus {
+  border-color: #438278;
+  outline: none;
+}
+
+/* Styling for the destination options */
+.destination-option {
+  color: #fff;
+  font-family: Poppins, sans-serif;
+  font-size: 15px;
+}
+
+/* Styling for the duration options */
+.duration-option {
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+  padding: 16px 0;
+  border: 2px solid #438278;
+  border-radius: 8px;
+  background-color: #4c4c4e;
+  color: #fff;
+  font-family: Poppins, sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  cursor: pointer;
+}
+
+/* Styling for the selected duration option */
+.duration-option.selected {
+  background-color: #177667;
+}

@@ -1,0 +1,56 @@
+<div class="home-container">
+  <!-- Main container for the home page -->
+
+  <!-- Container for the inner content, adjusts height based on parentSelectedDestination -->
+  <div class="home-inner-container" [class.full-height]="parentSelectedDestination">
+
+    <!-- Header component -->
+    <div class="home-header">
+      <app-header></app-header>
+    </div>
+
+    <!-- Content section -->
+    <section class="content-wrapper" [style.height.rem]="parentSelectedDestination ? 0 : 60">
+      <!-- Header for the content -->
+      <header class="header">
+        <h1>Anxious about staying connected on your trips?</h1>
+        <p class="e-sim">Our e-SIM got you covered, anywhere you go!</p>
+      </header>
+
+      <!-- Country selection container -->
+      <div class="selection-container">
+        <div class="country-selector">
+          <!-- Buttons for selecting countries -->
+          <button *ngFor="let countrySelector of countrySelectors" class="country-option"
+            (click)="selectCountry(countrySelector)"
+            [class.selected]="selectorOption === countrySelector">{{countrySelector}}</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Travel plan container -->
+    <section class="travel-plan-container" [class.move-top]="parentSelectedDestination">
+      <!-- Background images -->
+      <img src="../../assets/screen.png" alt="" class="background-image">
+      <img src="../../assets/deep-purple.png" alt="" class="background-image">
+
+      <!-- Query section for planning -->
+      <app-query-section *ngIf="planDetails" (selectedDestinationChange)="handleSelectedDestinationChange($event)"
+        (actionButtonIsDisableChange)="handleActionButtonChange($event)"
+        (selectedFlagChange)="handleSelectedFlagChange($event)"
+        (destinationQuerySelected)="handleDestinationQuerySelected($event)"></app-query-section>
+
+      <!-- Display plans based on selection -->
+      <app-plans *ngIf="!planDetails" [countryFlag]="selectedCountryFlag" [countryName]="destinationQuery"></app-plans>
+
+      <!-- Button for plan action -->
+      <button class="plan-action-button" [disabled]="planActionButton" (click)="buttonClick()">
+        {{buttonName}}
+        <img src="../../assets/arrow.png" alt="Arrow icon" class="arrow-icon" alt="Search icon">
+      </button>
+    </section>
+
+    <!-- Footer component -->
+    <app-footer [parentSelectedDestination]="parentSelectedDestination"></app-footer>
+
+  </div>

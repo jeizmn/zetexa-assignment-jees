@@ -1,0 +1,70 @@
+/* Sticky behavior for the footer */
+:host {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Sticky behavior for the footer when 'stick-bottom' class is applied */
+.rating-display.stick-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Styling for the rating display section */
+.rating-display {
+  display: flex;
+  align-items: start;
+  gap: 9px;
+  margin-top: 8px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 991px) {
+  .rating-display {
+    flex-direction: column;
+  }
+}
+
+/* Styling for the rating star and company logo */
+.rating-star,
+.company-logo {
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Specific styling for the rating star */
+.rating-star {
+  width: 85px;
+}
+
+/* Specific styling for the company logo */
+.company-logo {
+  width: 94px;
+}
+
+/* Styling for the rating information */
+.rating-info {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  object-fit: contain;
+}
+
+/* Styling for the rating text and value */
+.rating-text,
+.rating-value {
+  color: aliceblue;
+  margin: 0;
+}
+
+/* Specific styling for the rating value */
+.rating-value {
+  font-weight: bold;
+  text-decoration: underline;
+}
